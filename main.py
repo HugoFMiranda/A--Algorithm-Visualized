@@ -88,7 +88,7 @@ def draw_grid(win, rows, width):
 
 
 def draw(win, grid, rows, width):
-    win.fill(Colors.WHITE)
+    win.fill(Colors.DARK_GREY)
     for row in grid:
         for spot in row:
             spot.draw(win)

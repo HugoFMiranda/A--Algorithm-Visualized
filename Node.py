@@ -11,7 +11,7 @@ class Node:
         self.x = row * width
         self.y = col * width
         self.neighbors = []
-        self.color = Colors.WHITE
+        self.color = Colors.DARK_GREY
 
     def get_pos(self):
         return self.row, self.col
@@ -20,10 +20,10 @@ class Node:
         return self.color == Colors.RED
 
     def is_open(self):
-        return self.color == Colors.GREEN
+        return self.color == Colors.PINK
 
     def is_barrier(self):
-        return self.color == Colors.BLACK
+        return self.color == Colors.LIGHT_GREY
 
     def is_start(self):
         return self.color == Colors.ORANGE
@@ -32,16 +32,16 @@ class Node:
         return self.color == Colors.TURQUOISE
 
     def reset(self):
-        self.color = Colors.WHITE
+        self.color = Colors.DARK_GREY
 
     def make_closed(self):
         self.color = Colors.RED
 
     def make_open(self):
-        self.color = Colors.GREEN
+        self.color = Colors.PINK
 
     def make_barrier(self):
-        self.color = Colors.BLACK
+        self.color = Colors.LIGHT_GREY
 
     def make_start(self):
         self.color = Colors.ORANGE
@@ -50,7 +50,7 @@ class Node:
         self.color = Colors.TURQUOISE
 
     def make_path(self):
-        self.color = Colors.PURPLE
+        self.color = Colors.LIGHT_GREEN
 
     def draw(self, win):
         pygame.draw.rect(win, self.color, (self.x, self.y, self.width, self.width))

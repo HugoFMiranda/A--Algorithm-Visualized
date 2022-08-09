@@ -1,1 +1,1 @@
-A* algoritmo
+Visualização do algoritmo A* recorrendo á libraria pygame
